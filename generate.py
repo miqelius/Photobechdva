@@ -1,5 +1,6 @@
 import json,pathlib
-p=pathlib.Path('/workspace/sites/photobechdva/dist')
+p=pathlib.Path(__file__).resolve().parent / 'dist'
 groups=[('cups','ჭიქები','Cups','Чашки',[0,1,2,18]),('jugs','დოქები','Pitchers','Кувшины',[3,4,5]),('vases','საყვავილეები','Vases','Вазы',[6,7,8,19]),('georgia','საქართველო, შენთან','A little Georgia','Частичка Грузии',[9,10,11]),('legends','ლეგენდები ფუნჯით','Legends in brushstrokes','Легенды в красках',[12,13,14,15,16,17])]
 names=[['ლურჯი ორნამენტი','Blue ornament','Синий орнамент'],['ყაყაჩოები','Poppies','Маки'],['ლიმონის დილა','Lemon morning','Лимонное утро'],['ბროწეულის დოქი','Pomegranate pitcher','Гранатовый кувшин'],['კობალტის ყვავილები','Cobalt blooms','Кобальтовые цветы'],['მინდვრის ფერები','Meadow colors','Краски луга'],['მზესუმზირები','Sunflowers','Подсолнухи'],['ზამბახი','Iris','Ирис'],['პატარა ბაღი','Little garden','Маленький сад'],['ხუთი ჯვარი','Five crosses','Пять крестов'],['ჩემი საქართველო','My Georgia','Моя Грузия'],['მე მიყვარს რაჭა','I love Racha','Я люблю Рачу'],['ზიდანი · 10','Zidane · 10','Зидан · 10'],['რონალდინიო · 10','Ronaldinho · 10','Роналдиньо · 10'],['რაული · 7','Raúl · 7','Рауль · 7'],['ბექემი · 23','Beckham · 23','Бекхэм · 23'],['გლაზგო · 2002','Glasgow · 2002','Глазго · 2002'],['ბერლინი · 2006','Berlin · 2006','Берлин · 2006'],['ვაზის ორნამენტი','Vine ornament','Виноградный орнамент'],['თბილისური აივნები','Tbilisi balconies','Тбилисские балконы']]
 (p/'data.js').write_text('const groups='+json.dumps(groups,ensure_ascii=False)+';const names='+json.dumps(names,ensure_ascii=False)+';')
+

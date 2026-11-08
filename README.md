@@ -13,3 +13,15 @@ All catalog images are illustrative AI-generated concepts, not photographs of ex
 
 ## Assets
 `dist/assets/00.webp` through `19.webp`: individually generated artisan product photographs, optimized to WebP. Prompts describe each ceramic item or football/Georgia themed shirt on an ivory studio backdrop, with visible brush textures and natural light. Original asset generation used the built-in image generation tool.
+
+
+## Python helper
+
+This is a static website, not a Python web backend. `generate.py` uses only the Python standard library to write localized catalog data to `dist/data.js`. It resolves `dist/` relative to the script, so it can run from any working directory:
+
+```bash
+python3 generate.py
+python3 -m http.server 8000 --directory dist
+```
+
+The generator overwrites `dist/data.js`; it does not create the HTML, styles, JavaScript application or images. No API keys, virtual environment or pip install is required for this helper. Generated catalog records remain illustrative concepts.
